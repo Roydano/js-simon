@@ -7,3 +7,44 @@
 // Pensate prima in italiano.
 // Dividete in piccoli problemi la consegna.
 // Individuate gli elementi di cui avete bisogno per realizzare il programma.
+
+
+
+var array= [];
+
+while(array.length < 5){
+    var numeroGen = randomNum(1, 100);
+
+    if(!array.includes(numeroGen)){
+        array.push(numeroGen);
+    }
+}
+
+console.log(array);
+
+
+alert(array);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//? FUNZIONI
+
+//! generare numeri random
+
+function randomNum(min, max){
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
