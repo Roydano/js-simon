@@ -21,28 +21,31 @@ alert(array);
 
 var userArray = [];
 
-// for(var i = 0; i < 5; i++){
-//     var choise = parseInt(prompt('Inserisci un numero'));
-
-//     if(!userArray.includes(choise) && array.includes(choise)){
-//         userArray.push(choise);
-//     }
-// }
-
-
-
 var timeleft = 3;
 var downloadTimer = setInterval(timer, 1000);
-var i = 0;
 
-
-while(i < 5 || downloadTimer == true){
+for(var i = 0; i < 5; i++ || downloadTimer == true){
     var choise = parseInt(prompt('Inserisci un numero'));
 
     if(!userArray.includes(choise) && array.includes(choise)){
         userArray.push(choise);
     }
 }
+
+
+
+// var timeleft = 3;
+// var downloadTimer = setInterval(timer, 1000);
+// var i = 0;
+
+
+// while(i < 5 || downloadTimer == true){
+//     var choise = parseInt(prompt('Inserisci un numero'));
+
+//     if(!userArray.includes(choise) && array.includes(choise)){
+//         userArray.push(choise);
+//     }
+// }
 
 
 console.log(userArray);
