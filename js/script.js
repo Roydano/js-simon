@@ -21,16 +21,10 @@ alert(array);
 
 var userArray = [];
 
-var timeleft = 3;
+var timeleft = 10;
 var downloadTimer = setInterval(timer, 1000);
 
-for(var i = 0; i < 5; i++ || downloadTimer == true){
-    var choise = parseInt(prompt('Inserisci un numero'));
 
-    if(!userArray.includes(choise) && array.includes(choise)){
-        userArray.push(choise);
-    }
-}
 
 
 
@@ -83,9 +77,28 @@ function orderNum(num1, num2){
 //! funzione countdown
 
 function timer(){
-    if(timeleft == 0){
-        return true;
-    }else{
-        timeleft--;
-    }
+    var choise = parseInt(prompt('Inserisci un numero'));
+
+    for(var i = 0; i < 5; i++){
+        if(timeleft >= 0){
+            timeleft--;
+            choise;
+            if(!userArray.includes(choise) && array.includes(choise)){
+                userArray.push(choise);
+            }
+    
+        }
+        else{
+            clearInterval(downloadTimer);
+            
+        }
+    } 
+
+
+
 }
+
+// var timeleft = 3;
+// var downloadTimer = setInterval(timer, 1000);
+
+
