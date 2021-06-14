@@ -19,35 +19,27 @@ console.log(array);
 
 alert(array);
 
-var userArray = [];
 
-var timeleft = 10;
-var downloadTimer = setInterval(timer, 1000);
-
-
-
-
-
-// var timeleft = 3;
+var timeleft = 30;
 // var downloadTimer = setInterval(timer, 1000);
-// var i = 0;
+
+setTimeout(function(){
+
+    var userArray = [];
+
+    for(var i = 0; i < 5; i++){
+        var choise = parseInt(prompt('Inserisci uno dei numeri che hai visto in precedenza!'));
+        if(!userArray.includes(choise) && array.includes(choise)){
+            userArray.push(choise);
+        }
+    }
+    console.log(userArray);
+    userArray.sort(orderNum);
+
+    document.getElementById('numeri').innerHTML = 'Hai indovinato ' + userArray.length + ' numeri su 5....ecco quali: ' + userArray;
 
 
-// while(i < 5 || downloadTimer == true){
-//     var choise = parseInt(prompt('Inserisci un numero'));
-
-//     if(!userArray.includes(choise) && array.includes(choise)){
-//         userArray.push(choise);
-//     }
-// }
-
-
-console.log(userArray);
-userArray.sort(orderNum);
-
-
-
-console.log('Hai indovinato ' + userArray.length + ' numeri su 5....ecco quali: ' + userArray);
+}, timeleft * 1000);
 
 
 
@@ -73,32 +65,5 @@ function randomNum(min, max){
 function orderNum(num1, num2){
     return num1 - num2;
 }
-
-//! funzione countdown
-
-function timer(){
-    var choise = parseInt(prompt('Inserisci un numero'));
-
-    for(var i = 0; i < 5; i++){
-        if(timeleft >= 0){
-            timeleft--;
-            choise;
-            if(!userArray.includes(choise) && array.includes(choise)){
-                userArray.push(choise);
-            }
-    
-        }
-        else{
-            clearInterval(downloadTimer);
-            
-        }
-    } 
-
-
-
-}
-
-// var timeleft = 3;
-// var downloadTimer = setInterval(timer, 1000);
 
 
